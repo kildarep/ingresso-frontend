@@ -1,0 +1,237 @@
+/* CSS do index.html e comprar.html combinados */
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fdf7f0;
+    color: #3e2a1c;
+  }
+  
+  .header {
+    background-image: url("image.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    height: 120px;
+  }
+  
+  .header img {
+    height: 60px;
+    border-radius: 8px;
+    max-width: 100%; /* Adicionado para index.html */
+  }
+  
+  .content {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 600px; /* Adicionado para centralizar conteúdo em comprar.html */
+    margin: auto; /* Adicionado para centralizar conteúdo em comprar.html */
+  }
+  
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; /* Ajustado para index.html */
+    margin-bottom: 20px;
+  }
+  
+  .content img { /* Para imagem principal no index.html */
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  ul {
+    list-style-position: inside; 
+    padding-left: 0; 
+    margin: 0 auto; 
+    max-width: 600px; 
+    text-align: left; 
+  }
+  
+  li {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #3e2a1c; 
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #8b5e3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+    font-weight: 600;
+  }
+  
+  .btn:hover {
+    background-color: #6e452c;
+  }
+  
+  .map-link {
+    text-decoration: none;
+    color: #3e2a1c;
+    font-weight: normal;
+    position: relative;
+  }
+  
+  .map-link:hover::after {
+    content: "Abrir no Google Maps";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #6e452c;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    margin-top: 4px;
+    z-index: 10;
+  }
+  
+  /* Estilos específicos do formulário de comprar.html */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  input, label {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="file"] {
+    border: none;
+  }
+  
+  .pix-info {
+    margin-top: 20px;
+    background-color: #fff9e5;
+    padding: 15px;
+    border: 1px solid #d4a373;
+    border-radius: 10px;
+  }
+  
+  .pix-info img {
+    max-width: 50%; 
+    height: auto; 
+    display: block; 
+    margin: 10px auto; 
+    border-radius: 5px; 
+  }
+  
+  .sucesso {
+    display: none;
+    background-color: #8b5e3c;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .pix-code-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 10px;
+    width: 100%; 
+    flex-wrap: wrap; 
+    padding: 0 5px; 
+    box-sizing: border-box; 
+  }
+  
+  .pix-code-display {
+    background-color: #fff9e5; 
+    border: 1px solid #d4a373; 
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 11px; 
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #3e2a1c;
+    word-break: break-all; 
+    overflow-wrap: break-word; 
+    flex-grow: 1;
+    text-align: left; 
+    margin-right: 10px; 
+    box-sizing: border-box;
+  }
+  
+  .copy-btn {
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+  }
+  
+  .copy-feedback {
+    display: none; 
+    margin-top: 10px;
+    color: #8b5e3c;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 480px) {
+    .content {
+      padding: 30px 15px;
+    }
+  
+    .btn {
+      padding: 12px 20px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .header {
+      justify-content: center;
+      padding: 10px 15px;
+      height: auto;
+    }
+  
+    .header img {
+      height: 50px;
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  
+    ul {
+      padding: 0 15px; 
+    }
+  
+    /* Específicos de comprar.html */
+    .pix-code-container {
+      flex-direction: column; 
+    }
+    .pix-code-display {
+      margin-right: 0; 
+      margin-bottom: 10px; 
+      width: 100%; 
+    }
+    .copy-btn {
+      width: 100%; 
+    }
+  }
+  

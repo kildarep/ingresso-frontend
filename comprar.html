@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comprar Ingresso - Sexta da Advocacia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- Link para o CSS externo -->
+
+</head>
+<body>
+  <div class="header">
+    <img src="logo.png" alt="Logo do Escritório">
+  </div>
+
+  <div class="content">
+
+    <h1>Comprar Ingresso</h1>
+    <p><strong>Valor do Ingresso:</strong> R$ 60</p>
+
+    <div class="pix-info">
+      <strong>Chave Pix:</strong>
+      <img src="qrcodepix.png" alt="Logo do Escritório">
+  
+      <div class="pix-code-container">
+        <span id="pix-code" class="pix-code-display">00020126580014BR.GOV.BCB.PIX013662b2e65d-2b3d-4c3e-8f5a-3d2b1c0e9f8d520400005303986540510.005802BR5913NomeRecebedor6008BRASILIA62070503***6304D162</span>
+        <button id="copy-pix-btn" class="copy-btn">Copiar Código</button>
+      </div>
+      <span id="copy-feedback" class="copy-feedback">Copiado!</span>
+      <br>
+      <small>Depois de pagar, digite seu nome completo e numero para contato, iremos confirmar sua
+        compra no Whatsapp informado.</small>
+    </div>
+  <br />
+
+  <form id="form-compra">
+    <input type="text" name="nome" placeholder="Seu nome completo" required>
+    <input type="tel" name="celular" placeholder="(00) 90000-0000" required>
+    <button type="submit" class="btn">Finalizar Compra</button>
+  </form>
+
+  <div id="mensagem-sucesso" class="sucesso">
+    Compra realizada! Aguarde a confirmação no seu WhatsApp.
+  </div>
+
+  <script src="script.js"></script> <!-- Carrega seu JavaScript externo -->
+
+  </div>
+</body>
+</html>
